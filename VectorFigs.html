@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Vector figures</title>
-	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-	<style type="text/css">
-		body
-		{
-		  background-color:#232323
-		}
-		canvas
-		{
-		  background-color:white;  
-		}
-		input[type='number']
-		{
-		  background:#151515;
-		  border:none;
-		  outline:none;
-		  color:white;
-		  text-align:center;
-		}
-		label
-		{
-		  color:white;
-		}
-	</style>
-</head>
-<body>
-	<canvas id="myCanvas" width = "800" height="400" style="border:1px solid #000000;">	
-		<script type="text/javascript" src="main.js"></script>
-	</canvas>
-	<br>
-	<label>Sides: <input type="number" id="sides" value="4" min="3">
-	<br>
-	<label>X1: <input type="number" id="p1_X" value="0"><label>Y1: <input type="number" id="p1_Y" value="0"><br>
-	<label>X2: <input type="number" id="p2_X" value="0"><label>Y2: <input type="number" id="p2_Y" value="0"><br>
-	<label>Change the values in the boxes to see the polygon</label>
+	<head>
+		<title>Vector figures</title>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<canvas
+			id="myCanvas"
+			width="800"
+			height="400"
+			style="border: 1px solid #000000"
+		>
+			<script type="text/javascript" src="main.js"></script>
+		</canvas>
 
-
-</body>
+		<div class="bg-slate-100 p-2 mt-4">
+			<div class="text-xl">Settings</div>
+			<div class="grid grid-cols-2 gap-2 mt-2 w-1/2">
+				<label for="sides">Sides:</label>
+				<input
+					type="number"
+					id="sides"
+					value="4"
+					min="3"
+					class="rounded w-1/2 text-center p-1 bg-slate-200"
+				/>
+				<label for="p1_X">X1:</label>
+				<input
+					type="number"
+					id="p1_X"
+					value="0"
+					class="rounded w-1/2 text-center p-1 bg-slate-200"
+				/>
+				<label for="p1_Y">Y1:</label>
+				<input
+					type="number"
+					id="p1_Y"
+					value="0"
+					class="rounded w-1/2 text-center p-1 bg-slate-200"
+				/>
+				<label for="p2_X">X2:</label>
+				<input
+					type="number"
+					id="p2_X"
+					value="0"
+					class="rounded w-1/2 text-center p-1 bg-slate-200"
+				/>
+				<label for="p2_Y">Y2:</label>
+				<input
+					type="number"
+					id="p2_Y"
+					value="0"
+					class="rounded w-1/2 text-center p-1 bg-slate-200"
+				/>
+			</div>
+			<div class="mt-4">Change the values in the boxes to see the polygon</div>
+		</div>
+	</body>
 </html>
